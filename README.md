@@ -18,3 +18,8 @@ mvn package && java -jar target/forum-springboot-1.0.0-SNAPSHOT.jar
 
 ### v1.0.0
 * Simplest possible Spring Boot application. Doesn't do anything, just exits the application.
+
+### v1.0.1
+* Added `spring-boot-starter-web` to enable embedded container (Tomcat).
+* Try http://localhost:8080
+
