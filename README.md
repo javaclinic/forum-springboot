@@ -9,9 +9,11 @@ Simple Spring Boot application demo.
 
 ### Run from Command Prompt
 * Type in the Maven commands from the command prompt, e.g.
+```
     
     mvn package && java -jar target/forum-springboot-1.0.0-SNAPSHOT.jar
     
+```
 
 ## Versions
 
@@ -37,7 +39,8 @@ Simple Spring Boot application demo.
 ### v1.0.3
 * Added `spring-boot-starter-remote-shell` to enable remote shell to log in.
 * You will see ssh configuration options, e.g.
-
+```
+    
     Configuring property ssh.port=2000 from properties
     Configuring property ssh.auth_timeout=600000 from properties
     Configuring property ssh.idle_timeout=600000 from properties
@@ -45,14 +48,19 @@ Simple Spring Boot application demo.
     Configuring property auth=simple from properties
     Configuring property auth.simple.username=user from properties
     Configuring property auth.simple.password=5b5e235f-db1f-4b69-895f-d09277a39a26 from properties
+    
+```
 
 * Try logging into the remote shell, e.g.
+```
     
     ssh -p 2000 user@localhost
     (use default password, e.g. 5b5e235f-db1f-4b69-895f-d09277a39a26)
     
+```
 
 * Try various commands, e.g.
+```
     
     help
     
@@ -82,6 +90,7 @@ Simple Spring Boot application demo.
     help       provides basic help
     repl       list the repl or change the current repl
     
+```
 
 ### v1.0.4
 * Make sure HSQL database is available with datasource details described below.
@@ -89,6 +98,7 @@ Simple Spring Boot application demo.
 * Added HSQL database drivers
 * Added `src/main/resources/application.properties`, e.g.
     
+```
     #
     # src/main/resources/application.properties
     #
@@ -99,6 +109,7 @@ Simple Spring Boot application demo.
     
     spring.jpa.hibernate.ddl-auto=validate
     
+```
 
 * Try http://localhost:8080/health
 
