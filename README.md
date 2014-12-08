@@ -83,5 +83,23 @@ help       provides basic help
 repl       list the repl or change the current repl
 ```
 
+### v1.0.4
+* Make sure HSQL database is available with datasource details described below.
+* Added `spring-boot-starter-data-jpa` to enable Spring Data with JPA (Hibernate)
+* Added HSQL database drivers
+* Added `src/main/resources/application.properties`, e.g.
+```
+#
+# src/main/resources/application.properties
+#
+spring.datasource.driverClassName=org.hsqldb.jdbcDriver
+spring.datasource.url=jdbc:hsqldb:hsql://localhost:9002/mydb
+spring.datasource.username=sa
+spring.datasource.password=
+
+spring.jpa.hibernate.ddl-auto=validate
+```
+* Try http://localhost:8080/health
+
 
 
