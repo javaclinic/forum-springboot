@@ -23,3 +23,16 @@ mvn package && java -jar target/forum-springboot-1.0.0-SNAPSHOT.jar
 * Added `spring-boot-starter-web` to enable embedded container (Tomcat).
 * Try http://localhost:8080
 
+### v1.0.2
+* Added `spring-boot-starter-actuator` to enable monitoring, metrics and other useful utilities.
+* Try the following pages:
+  * http://localhost:8080/beans
+  * http://localhost:8080/metrics
+  * http://localhost:8080/dump
+  * http://localhost:8080/env
+  * http://localhost:8080/trace
+  * http://localhost:8080/info
+  * http://localhost:8080/health
+  * http://localhost:8080/mappings
+
+
