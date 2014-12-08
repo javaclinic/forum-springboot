@@ -113,5 +113,17 @@ Simple Spring Boot application demo.
 
 * Try http://localhost:8080/health
 
+### v1.0.5
+* Added mapped super class, e.g. `example.forum.domain.IdentifiableEntity`
+* Added two identifiable entities, e.g. `example.forum.domain.User` and `example.forum.domain.Category`
+* Added two JpaRepositories, e.g. `example.forum.jpa.UserRepository` and `example.forum.jpa.CategoryRepository`
+* Added two RestControllers, e.g. `example.forum.web.UserController` and `exmaple.forum.web.CategoryController`
+* Updated application to include all repositories, all REST controllers, all JPA entities.
+* Try:
+  * http://localhost:8080/user
+  * http://localhost:8080/user/count
+  * http://localhost:8080/category
+  * http://localhost:8080/category/count
+
 
 
