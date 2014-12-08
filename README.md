@@ -126,4 +126,31 @@ Simple Spring Boot application demo.
   * http://localhost:8080/category/count
 
 
+### v1.0.6
+* Added `spring-boot-starter-data-rest` to enable REST and HATEOAS support
+* Added `@RepositoryRestResource` to JPA repository interfaces
+* Removed all other controllers, e.g. `UserController` and `CategoryController`
+* Try:
+  * http://localhost:8080/
+  * http://localhost:8080/user
+  * http://localhost:8080/user/1
+  * http://localhost:8080/category
+  * http://localhost:8080/category/1
+  * http://localhost:8080/user?size=2&page=0
+  * http://localhost:8080/user?size=2&page=1
+  * http://localhost:8080/category?size=3&page=0
+  * http://localhost:8080/category?size=3&page=1
+  * http://localhost:8080/user/search/findByEmail?email=john@email.com
+  * http://localhost:8080/category/search/findByName?name=hibernate
+* Try `curl` utility to use other HTTP methods, e.g. `GET`, `POST`, `PUT`, `DELETE`, `PATCH`
+    
+```
+curl http://localhost:8080/category/1
+curl -i -X GET http://localhost:8080/category/1
+curl -i -X POST -d '{ "name": "spring-boot", "description": "Spring Boot" }' -H 'Content-Type: application/json' http://localhost:8080/category
+curl -i -X GET http://localhost:8080/category/6
+curl -i -X DELETE http://localhost:8080/category/6
+...etc...
+```
+    
 

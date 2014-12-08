@@ -7,7 +7,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
-import javax.persistence.Transient;
 
 /**
  * Used as a "base" entity for all entities with "id" property.
@@ -33,20 +32,15 @@ public class IdentifiableEntity implements Serializable {
         this.id = id;
     }
 
-    @Transient
-    public boolean isIdSet() {
-        return id != null;
-    }
-
     @Override
     public int hashCode() {
-       return this.isIdSet() ? 31 * this.id.hashCode() : super.hashCode();
+       return id != null ? 31 * this.id.hashCode() : super.hashCode();
     }
 
     @Override
     public boolean equals(Object object) {
         if (this == object) return true;
-        if ( this.isIdSet() && object instanceof IdentifiableEntity ) {
+        if ( this.id != null && object instanceof IdentifiableEntity ) {
             IdentifiableEntity other = (IdentifiableEntity) object;
             return this.getId().equals(other.getId());
         }
